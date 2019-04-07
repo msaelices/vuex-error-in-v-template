@@ -1,9 +1,8 @@
 <template>
     <Page>
-        <ActionBar title="Welcome to NativeScript-Vue!"/>
+        <ActionBar title="App for checking NS-vue #473 issue"/>
         <GridLayout columns="*" rows="*">
-            <Label class="message" :text="msg" col="0" row="0"/>
-            <ListView for="item in items" @itemTap="onItemTap">
+            <ListView for="item in items">
               <v-template>
                 <MyComponent :item="item" />
               </v-template>
@@ -16,13 +15,13 @@
   import MyComponent from './MyComponent'
 
   export default {
-    data() {
-      return {
-        msg: 'Hello World!'
-      }
-    },
     components: {
       MyComponent,
+    },
+    computed: {
+      items () {
+        return this.$store.state.items
+      }
     }
   }
 </script>

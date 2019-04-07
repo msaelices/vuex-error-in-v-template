@@ -5,9 +5,6 @@
 <script >
   export default {
     props: ['item'],
-    components: {
-      MyComponent,
-    },
     methods: {
       changeText () {
         this.$store.dispatch('changeText', {
@@ -19,16 +16,3 @@
   }
 </script>
 
-<style scoped>
-    ActionBar {
-        background-color: #53ba82;
-        color: #ffffff;
-    }
-
-    .message {
-        vertical-align: center;
-        text-align: center;
-        font-size: 20;
-        color: #333333;
-    }
-</style>
