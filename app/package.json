@@ -1,0 +1,8 @@
+{
+  "android": {
+    "v8Flags": "--expose_gc"
+  },
+  "main": "main",
+  "name": "vuex-error-in-v-template",
+  "version": "1.0.0"
+}
