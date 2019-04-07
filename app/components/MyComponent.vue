@@ -8,7 +8,7 @@
     methods: {
       changeText () {
         this.$store.dispatch('changeText', {
-          item,
+          item: this.item,
           text: 'Other Text',
         })
       },
